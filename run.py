@@ -341,8 +341,8 @@ def edit_task(task_id):
         try:
             task.title = title 
             task.description = description 
-            due_date = due_date
-            project_id = project_id
+            task.due_date = due_date
+            task.project_id = project_id
 
             db.session.commit()
         except Exception as e:
@@ -483,4 +483,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
